@@ -1,0 +1,6 @@
+{
+"prefix": "!",
+"token": "token",
+"guildID": "Server ID",
+"categoryID": "Category ID in which it'll create the channels for modmail"
+}
