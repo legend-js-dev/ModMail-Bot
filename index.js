@@ -8,7 +8,6 @@ const client = new Client({
 	disableMentions: 'everyone'
 });
 
-client.loadCommands();
 console.log('-------------------------------------');
 console.log(`
 ██╗     ███████╗ ██████╗ ███████╗███╗   ██╗██████╗         ██╗███████╗
