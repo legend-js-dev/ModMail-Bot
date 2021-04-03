@@ -2,6 +2,7 @@
 const Client = require('./Structures/legendJsClient.js');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
+const config = require('./config.json');
 //dont touch the credits or i will find you and u will have to commit die >:D
 const client = new Client({
 	disableMentions: 'everyone'
