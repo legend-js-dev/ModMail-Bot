@@ -71,6 +71,7 @@ hook.send(message.content ? message.content : null, {
 })
   } else {
     let chan = guild.channels.cache.find(c => c.name === message.author.id);
+    if (!chan) return;
     let hooks = await chan.fetchWebhooks();
     let hook = hooks.first();
 hook.send(message.content ? message.content : null, {
@@ -88,7 +89,7 @@ message.attachments.forEach(attach => attachs.push({ name: attach.name, attachme
   let reason = message.content.slice(9);
   if (!reason) reason = "None";
   message.channel.send(`**The modmail has been closed with the reason: ${reason}, deleteing this channel in 10 Seconds...**`);
-  channel.setName("closed").catch(err => undefined);
+  message.channel.setName("closed").catch(err => undefined);
   setTimeout(() => {
     message.channel.delete().catch(err => undefined);
   }, 10000)
