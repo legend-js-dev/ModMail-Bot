@@ -1,4 +1,4 @@
-//ModMail bot by legend >:D
+//ModMail bot by legendjs >:D
 const Client = require('./Structures/legendJsClient.js');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
@@ -20,7 +20,7 @@ console.log(`
 
 console.log('-------------------------------------');
 console.log(
-	'[CREDITS]: made by legend-js | https://github.com/legend-js-dev | LΣGΣПD#0001'
+	'[CREDITS]: made by legend-js | https://github.com/legend-js-dev | legendjs#0001'
 );
 console.log('-------------------------------------');
 //this took me some time so dont you dare remove credits, if u do remove credits then you will have copy right issues.
@@ -32,7 +32,7 @@ client.on('ready', () => {
 		} channels & ${client.users.cache.size} users`
 	);
 	console.log('-------------------------------------');
-	client.user.setActivity('ModMail bot by legend :D', {
+	client.user.setActivity('ModMail bot by legendjs :D', {
 		type: 'WATCHING'
 	});
 });
@@ -57,7 +57,7 @@ message.attachments.forEach(attach => attachs.push({ name: attach.name, attachme
   .setDescription(`**New ModMail.**`)
   .setThumbnail(message.author.displayAvatarURL())
   .setTimestamp()
-  .setFooter(message.author.tag + " Made By LΣGΣПD#0001", message.author.displayAvatarURL())
+  .setFooter(message.author.tag + " Made By legendjs#0001", message.author.displayAvatarURL())
   chan.send({ embed: embed })
   chan.createWebhook(message.author.username, {
   avatar: message.author.displayAvatarURL(),
